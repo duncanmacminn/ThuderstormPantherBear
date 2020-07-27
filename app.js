@@ -1,39 +1,43 @@
-const express = require("express");
-const app = express();
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 
-app.use(express.urlencoded({ extended: true }));
+//var greetingsRouter = require('./routes/greetings');
+//var contactusRouter = require('./routes/contactus');
+//var registerRouter = require('./routes/register');
 
-app.get("/registerdata", (req, res) => {
+var app = express();
 
-  var mysql = require("mysql");
-  var con = mysql.createConnection({
-    host: "localhost",
-    user: "Crystal",
-    password: "MentoS69&",
-    database: "travelexperts",
-  });
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
 
-  con.connect(function (err) {
-    if (err) throw err;
-    con.query("SELECT * FROM customers", function (err, result, fields) {
-      if (err) throw err;
-      console.log(result);
-    });
-  });
-  res.send("<h1>Working</h1>");
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+//app.use('/greetings', greetingsRouter);
+//app.use('/register', registerRouter);
+//app.use('/contactus', contactusRouter);
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
 });
 
-app.use(
-  express.static("public", {
-    extensions: ["html"],
-  })
-);
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-app.use((req, res, next) => {
-  res.status(404).send("<h2>Nooooooooo! Go back! GO BACK!!!</h2>");
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
 });
 
-app.listen(8000, (err) => {
-  if (err) throw err;
-  console.log("Server is listening...");
-});
+module.exports = app;
