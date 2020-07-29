@@ -19,10 +19,10 @@
 
     <!-- Navigation -->
 
-    <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
         <div class="container">
             <a href="index.html" class="navbar-brand">
-                <img src="images/logogry.png" alt="logo" title="Logo">
+                <img src="images/logogry.png" alt="logo" title="Sweetpea Travel's">
             </a>
             <h2>Sweetpea Travel's</h2>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
@@ -89,55 +89,69 @@
 
     <!--Quote-->
 
-    <div class="jumbotron text-center">
+    <div class="jumbotron">
         <div class="quote">
             <div id="quoteDisplay" class="font-italic" class="font-weight-bold">
             </div><br>
             <button class="button" onclick="newQuote()">Click Me for a Quote!</button>
         </div>
     </div>
+
     <!--Fixed Image-->
-    <div class="fixed-bg"></div>
+    <!--<div class="fixed-bg"></div>-->
 
-    <!--3 Columns-->
-    <hr class="my-4">
+    <!--Vacay Packages-->
 
+    <div class="text-center">
+        <h1 class="display-3">Vacation Packages</h1>
+    </div>
+    <br>
+    <br>
     <div class="container">
         <div class="responsive">
             <div class="gallery">
-                <a target="_blank">
-                    <img src="images/tarizonarocks.jpg" alt="Arizona" class="img-thumbnail"> </a>
-                <div class="desc">Add a description of the image here</div>
+                <a href="./packages.html">
+                    <img src="images/tarizonarocks.jpg" alt="Arizona" class="img-thumbnail" title="Arizona"> </a>
+                <div class="desc">The beauty of Arizona is not limited to the Grand Canyon
+                    and golfing, there is so much more to uncover. Discover all the unique experiences now.</div>
             </div>
         </div>
         <div class="responsive">
             <div class="gallery">
-                <a target="_blank">
-                    <img src="images/winetour.jpg" alt="Wine Tour" class="img-thumbnail"></a>
-                <div class="desc">Add a description of the image here</div>
+                <a href="./packages.html">
+                    <img src="images/winetour.jpg" alt="Wine Tour" class="img-thumbnail"
+                        title="Napa Valley Wine Tour"></a>
+                <div class="desc">Red, White, or a Rosé?<br>Whether you are going it solo; with one friend; or there
+                    is a group of you; a Napa Valley Wine Tour is for everyone.
+                </div>
             </div>
         </div>
         <div class="responsive">
             <div class="gallery">
-                <a target="_blank">
-                    <img src="images/fishing.jpg" alt="" class="img-thumbnail"></a>
-                <div class="desc">Add a description of the image here</div>
+                <a href="./packages.html">
+                    <img src="images/fishing.jpg" alt="retreat" class="img-thumbnail" title="Rockies Retreat"></a>
+                <div class="desc">Come relax at Wellness Lodge for a week, or more. Yoga, meditation, horseback
+                    riding, hiking, and so much more, await you in the Rockies.</div>
             </div>
         </div>
         <div class="responsive">
             <div class="gallery">
-                <a target="_blank">
-                    <img src="images/tree.jpg" alt="Scotland" class="img-thumbnail"> </a>
-                <div class="desc">Add a description of the image here</div>
+                <a href="./packages.html">
+                    <img src="images/tree.jpg" alt="Australia" class="img-thumbnail" title="Australia"> </a>
+                <div class="desc">Not only does it match every taste, budget, age, or
+                    interests, but Australia also delivers unique experiences
+                    impossible to find anywhere else.</div>
             </div>
         </div>
     </div>
-<br>
+    </div>
+    <div class="clearfix"></div>
+
     <!--Connect-->
-    <div class="container">
-        <div class="row text-center padding">
+    <div class="jumbotron">
+        <div class="row text-center">
             <div class="col-12">
-                <h2>Connect</h2>
+                <h2>Connect With Us</h2>
             </div>
             <div class="col-12 social padding">
                 <a href="#"><i class="fab fa-facebook"></i></a>
@@ -147,16 +161,14 @@
         </div>
     </div>
 
-    <hr class="my-4">
     <!--Footer-->
 
     <footer>
-        <div class="container-fluid padding">
-            <div class="row text-center padding">
+        <div class="container">
+            <div class="row text-center">
                 <div class=" col-md-4">
-                    <img src="images/logoG.png">
+                    <img src="images/logoG2.jpg">
                 </div>
-
                 <div class="col-md-4">
                     <div class="font-weight-bold">
                         <h2>Sweetpea Travel's</h2>
@@ -178,12 +190,11 @@
                 </div>
 
                 <div class="col-12">
-                    <div class="font-weight-bold">
-                        <h5>&copy; Sweetpea Travel's</h5>
-                    </div>
+                    <h5 font-weight="bold">&copy; Sweetpea Travel's</h5>
                 </div>
             </div>
         </div>
+      
     </footer>
 
 </body>
