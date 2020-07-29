@@ -5,7 +5,7 @@ const data = require('../models/mongoose_models/mongoose_data')
 var setCustomerId = router.get('/', (req, res, next) => {
   data.getCustomerId(req.query.CustomerId, (err, data) => {
     return data.CustomerId;
-  })
+  })});
 
 // Creates a new customer 
 router.post('/', (req, res, next) => {
