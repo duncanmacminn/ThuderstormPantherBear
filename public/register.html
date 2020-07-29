@@ -57,29 +57,32 @@
       </div>
     </div>
     <div class="container">
-      <form name="myForm" action="/registerdata" onsubmit="return validateForm()" method="GET">
+      <form name="myForm" action="/registerdata" onsubmit="return Validate()" method="POST">
 
         <div class="form-group">
-          <label for="firstName">First Name:</label>
-          <input type="text" class="form-control" placeholder="First Name" id="firstName" name="firstName" required />
+          <label for="CustFirstName">First Name:</label>
+          <input type="text" class="form-control" placeholder="First Name" id="CustFirstName" name="CustFirstName" required />
         </div>
         <div class="form-group">
-          <label for="lastName">Last Name:</label>
-          <input type="text" class="form-control" placeholder="Last Name" id="lastName" name="lastName" required />
+          <label for="CustLastName">Last Name:</label>
+          <input type="text" class="form-control" placeholder="Last Name" id="CustLastName" name="CustLastName" required />
           <label for="age">Age:</label>
           <input type="text" class="form-control" placeholder="Age" id="age" name="age" />
-          <label for="streetaddress">Street Address:</label>
-          <input type="text" class="form-control" placeholder="Street Address" id="streetaddress"
-            name="streetaddress" />
-          <label for="city">City:</label>
-          <input type="text" class="form-control" placeholder="City" id="city" name="city" />
-          <label for="province">Province:</label>
-          <input type="text" class="form-control" placeholder="Province" id="province" name="province" />
-          <label for="postalCode">Postal Code:</label>
-          <input type="text" class="form-control" placeholder="Postal Code" id="postalCode" name="postalCode" />
-          <label for="postalCode">Phone Number:</label>
-          <input type="text" class="form-control" placeholder="Phone Number" id="phoneNumber" name="phoneNumber"
-            required />
+          <label for="CustAddress">Street Address:</label>
+          <input type="text" class="form-control" placeholder="Street Address" id="CustAddress"
+            name="CustAddress" />
+          <label for="CustCity">City:</label>
+          <input type="text" class="form-control" placeholder="City" id="CustCity" name="CustCity" />
+          <label for="CustProv">Province:</label>
+          <input type="text" class="form-control" placeholder="Province" id="CustProv" name="CustProv" />
+          <label for="CustPostal">Postal Code:</label>
+          <input type="text" class="form-control" placeholder="Postal Code" id="CustPostal" name="CustPostal" />
+          <label for="CustHomePhone">Home Phone:</label>
+          <input type="text" class="form-control" placeholder="Home Phone" id="CustHomePhone" name="CustHomePhone" required />
+          <label for="CustBusPhone">Business Phone:</label>
+          <input type="text" class="form-control" placeholder="Business Phone" id="CustBusPhone" name="CustBusPhone"/>
+          <label for="password">Password:</label>
+          <input type="text" class="form-control" placeholder="Password" id="password" name="passWord" required/>
         </div>
         <div class="form-group">
           <div class="form-check-inline">
