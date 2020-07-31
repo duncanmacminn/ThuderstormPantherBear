@@ -1,11 +1,12 @@
 const mongoose = require('./mongoose_connect');
 const { Int32 } = require('mongodb');
 // Creating the Customer Schema
-const CustomerSchema = new mongoose.Schema({
-    CustomerId: {
+var CustomerSchema = new mongoose.Schema(
+    {
+    /*CustomerId: {
         type: Number,
         unique: true
-    },
+    },*/
     CustFirstName: {
         type: String,
         required: true
@@ -24,11 +25,11 @@ const CustomerSchema = new mongoose.Schema({
         required: true
     },
     CustBusPhone: String,
-    CustEmail: {
+    /*CustEmail: {
         type: String,
         unique: true
-    },
-    AgentId: Number
+    },*/
+    /*AgentId: Number*/
 });
 // Creating the Customer collection Model
 module.exports = mongoose.model('Customer', CustomerSchema);
