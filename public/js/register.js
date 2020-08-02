@@ -1,6 +1,6 @@
-var firstName = document.forms['myForm']['firstName'];
-var lastName = document.forms['myForm']['lastName'];
-var phoneNumber = document.forms['myForm']['phoneNumber'];
+var firstName = document.forms['myForm']['CustFirstName'];
+var lastName = document.forms['myForm']['CustLastName'];
+var phoneNumber = document.forms['myForm']['CustHomePhone'];
 
 firstName.addEventListener('blur', firstNameVerify, true);
 lastName.addEventListener('blur', lastNameVerify, true);
@@ -35,7 +35,7 @@ function Validate() {
 function firstNameVerify() {
   if (firstName.value != "") {
    firstName.style.border = "1px solid #5e6e66";
-   document.getElementById('firstName_div').style.color = "#5e6e66";
+   document.getElementById('CustFirstName_div').style.color = "#5e6e66";
    firstName_error.innerHTML = "";
    return true;
   }
@@ -43,7 +43,7 @@ function firstNameVerify() {
 function lastNameVerify() {
     if (lastName.value != "") {
      lastName.style.border = "1px solid #5e6e66";
-     document.getElementById('lastName_div').style.color = "#5e6e66";
+     document.getElementById('CustLastName_div').style.color = "#5e6e66";
      lastName_error.innerHTML = "";
      return true;
     }
@@ -51,7 +51,7 @@ function lastNameVerify() {
 function phoneNumberVerify() {
   if (phoneNumber.value != "") {
   	phoneNumber.style.border = "1px solid #5e6e66";
-  	document.getElementById('phoneNumber_div').style.color = "#5e6e66";
+  	document.getElementById('CustHomePhone_div').style.color = "#5e6e66";
   	phoneNumber_error.innerHTML = "";
   	return true;
   }
