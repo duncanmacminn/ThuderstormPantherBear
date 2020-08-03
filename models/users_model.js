@@ -4,7 +4,7 @@ const UserSchema = new mongoose.Schema({
     username: {
         type: String,
         required: true,
-        trim: true,              // trim means if it is string, we can trim it from beginning to end, no more space
+        trim: true,              
         unique: true
     },
     password: {
