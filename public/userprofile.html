@@ -105,9 +105,9 @@
                         </div> 
 <div>
     <div class="container">
-                        <form class="form-inline" method="POST" action="/users">
+                        <form class="form-inline" method="GET" action="/register">
                             <label for='userId'>User Id: </label>
-                                    <input type="text" required id='userId' name='userId' placeholder="userId" class='form-control'>
+                                    <input type="text" required id='userId' name='userId' value = "currentUser._id" placeholder="userId" class='form-control'>
                                     <label for='username'>User Name: </label>
                                     <input type="text" required id='username' name='username' placeholder="User Name" class='form-control'>
                                     <label for='firstname'>First Name: </label>
