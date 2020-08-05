@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Georgia:400,500,700");
 @import url(https://fonts.googleapis.com/css?family=Bitter);
-/*Footer colour changed to match index colour*/
+
 html,
 body {
   height: 100%;
@@ -52,7 +52,7 @@ input[type=submit] {
   cursor: pointer;
 }
 input[type=submit]:hover {
-  background-color: #45a049;
+  opacity: 0.7;
 }
 .container {
   border-radius: 5px;
@@ -71,13 +71,7 @@ input[type=submit]:hover {
   clear: both;
 }
 
-/*Footer*/
-footer {
-  padding-top: 2rem;
-  text-align: center;
-  background-color: #b4fcb4;
-  padding-bottom: 2rem;
-}
+
 .contact .info-box {
   color: #444444;
   background-color: #fe91ca;
@@ -108,4 +102,10 @@ footer {
   margin-bottom: 0;
 }
 
-
+/*Footer*/
+footer {
+  padding-top: 2rem;
+  text-align: center;
+  background-color: #b4fcb4;
+  padding-bottom: 2rem;
+}
