@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!--STILL BEING WORKED ON-->
+<!--Arman pretty much this whole page. I did not make a seperate css for it, there isn't much different from index page for styles. 
+    Anything different, I have noted on index css page-->
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,12 +50,40 @@
                 </ul>
             </div>
         </div>
-
     </nav>
 
-    <div class="col-12">
-        <h5 font-weight="bold">&copy; Sweetpea Travel's</h5>
+    <!---Dropdown Menu with vacation details when clicked-->
+    <h1> Vacation Package Selections</h1>
+
+
+    <div class="btn-group dropright">
+        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">Packages</button>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Arizona's Grand Escape</a>
+            <a href="#" class="dropdown-item">On Cloud Wine</a>
+            <a href="#" class="dropdown-item">Keep Calm & Wellness On</a>
+            <a href="#" class="dropdown-item">Adventours in OZ</a>
+        </div>
     </div>
+
+    <!--book this button-->
+    <input type="submit" value="Book Now">
+
+    <!--functions-->
+    <script>
+        /*booking date and time?? add into function on submit*/
+        var d = new Date();
+        document.getElementById("bookingdate").innerHTML = d;
+
+        /*Booking ID random string*/
+
+    </script>
+    <!--footer-->
+    <footer>
+        <div class="col-12">
+            <h5 font-weight="bold" style="text-align:center;">&copy; Sweetpea Travel's</h5>
+        </div>
+    </footer>
 </body>
 
 </html>
