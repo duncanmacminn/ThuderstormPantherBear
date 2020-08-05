@@ -12,7 +12,7 @@
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link href="./stylesheets/registerstylesheet.css" link rel="stylesheet">
     <script src="js/register.js"></script>
-    <link href="./stylesheets/userprofile.css" rel="stylesheet">
+  <link href="./stylesheets/logedinuser.css" rel="stylesheet"> 
 </head>
 
 <body>
@@ -72,10 +72,7 @@
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="profile-head">
-                                <h5>
-                                    Kshiti Ghelani
-                                </h5>
+                            <div class="profile-head">                                    
                                 <h6>
                                     Love travel around the world!
                                 </h6>
@@ -83,7 +80,7 @@
                                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home"
-                                            role="tab" aria-controls="home" aria-selected="true">About</a>
+                                            role="tab" aria-controls="home" aria-selected="true">Profile</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile"
@@ -97,7 +94,7 @@
                             <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile">
                         </div>
                     </div>
-                    <div class="row">
+                   <div class="row">
                         <div class="col-md-4">
                             <div class="profile-work">
                                 <p>Bookings</p>
@@ -105,76 +102,33 @@
                                 <a href="packages.html">Booking 2</a><br />
                                 <a href="packages.html">Booking 3</a>
                             </div>
-                        </div>
-                        <div class="col-md-8">
-                            <div class="tab-content profile-tab" id="myTabContent">
-                                <div class="tab-pane fade show active" id="home" role="tabpanel"
-                                    aria-labelledby="home-tab">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>User Id</label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>Kshiti123</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>Name</label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>Kshiti Ghelani</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>Email</label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>kshitighelani@gmail.com</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>Home Phone</label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>123 456 7890</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>Business Phone</label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>123 456 4321</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>Address</label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>123 Fake Road SE</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>City</label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>Calgary</p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <label>Province</label>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>Alberta</p>
-                                        </div>
-                                    </div>
-                                </div>
+                        </div> 
+<div>
+    <div class="container">
+                        <form class="form-inline" method="POST" action="/users">
+                            <label for='userId'>User Id: </label>
+                                    <input type="text" required id='userId' name='userId' placeholder="userId" class='form-control'>
+                                    <label for='username'>User Name: </label>
+                                    <input type="text" required id='username' name='username' placeholder="User Name" class='form-control'>
+                                    <label for='firstname'>First Name: </label>
+                                    <input type="text" required id='CustFirstName' name='CustFirstName' placeholder="First Name" class='form-control'>                               
+                                    <label for='lastname'>Last Name: </label>
+                                    <input type="text" required id='CustLastName' name='CustLastName' placeholder="Last Name" class='form-control'>
+                                    <label for='fname'>Address: </label>
+                                    <input type="text" id='Address' name='CustAddress' placeholder="Address" class='form-control'>
+                                    <label for='city'>City: </label>
+                                    <input type="text" id='city' name='CustCity' placeholder="City" class='form-control'>
+                                    <label for='province'>Province: </label>
+                                    <input type="text" id='province' name='province' placeholder="Province" class='form-control'>
+                                    <label for='home phone'>Home phone: </label>
+                                    <input type="text" id='CustHomePhone' name='CustHomePhone' placeholder="home phone" class='form-control'>
+                                    <label for='business phoone'>Business Phone: </label>
+                                    <input type="text" id='CustBusPhone' name='CustBusPhone' placeholder="business phone" class='form-control'>
+                                  <button id='saveData' style='display:none' class='btn btn-warning btn-block'>Save</button> 
+                                    <!--<button type='submit' class='btn btn-warning btn-block'>Save</button> -->
+                                </form> 
+                            </div>
+
                                 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                                     <form id="tab2">
                                         <label>New Password</label>

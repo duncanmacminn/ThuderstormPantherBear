@@ -94,36 +94,15 @@ script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js')
                 label Name
               .col-md-6
                  p Kshiti Ghelani
-      .row
-        .col-md-6
-          label Email
-        .col-md-6
-          p kshitighelani@gmail.com
-          .row
-  .col-md-6
-    label Home Phone
-  .col-md-6
-    p 123 456 7890
-.row
-  .col-md-6
-    label Business Phone
-  .col-md-6
-    p 123 456 4321
-.row
-  .col-md-6
-    label Address
-  .col-md-6
-    p 123 Fake Road SE
-    .row
-  .col-md-6
-    label City
-  .col-md-6
-    p Calgary
-.row
-  .col-md-6
-    label Province
-  .col-md-6
-    p Alberta
+
+      .container.m-5
+        table.table.table-hover
+            tr
+              td CustomerId
+              each row in customers
+                tr.table-info 
+                  td=row.CustomerId
+    
 
 #profile.tab-pane.fade(role='tabpanel' aria-labelledby='profile-tab')
   form#tab2
