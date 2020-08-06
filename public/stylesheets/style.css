@@ -68,18 +68,18 @@ body {
   font-size: 2.2rem;
   text-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 1);
 }
+
+/*Quote*/
 .jumbotron {
   text-align: center;
   background-color: #f9ddfa;
 }
-
-/*Quote*/
 .quote {
   font-size: 1.5rem;
 }
 
 .button {
-  background-color: rgb(120, 59, 126);
+  background-color: rgb(229, 109, 240);
   color: white;
   font-size: 1.5;
   border: 2px;
